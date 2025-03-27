@@ -3,6 +3,10 @@ import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { AccordionItemComponent } from "./components/accordion-item/accordion-item.component";
 import { AlertComponent } from "./components/alert/alert.component";
+import {
+  DropdownComponent,
+  DropdownItem,
+} from "./components/dropdown/dropdown.component";
 import { PhoneComponent } from "./components/phone/phone.component";
 import {
   TimelineComponent,
@@ -18,6 +22,7 @@ import {
     TimelineComponent,
     AlertComponent,
     AccordionItemComponent,
+    DropdownComponent,
   ],
   templateUrl: "./app.component.html",
   styles: [],
@@ -32,11 +37,22 @@ export class AppComponent {
     { start: "2020", end: "Gigi" },
   ];
 
+  dropdownItems: DropdownItem[] = [
+    { label: "Button", value: "button" },
+    { label: "Modal", value: "modal" },
+    { label: "Accordion", value: "accordion" },
+    { label: "Utils and Variables", value: "utilities-and-variables" },
+  ];
+
   onDenyHandler() {
     window.alert("Deny");
   }
 
   onConfirmHandler() {
     window.alert("Confirm!");
+  }
+
+  onClickElementHandler(event: string) {
+    window.alert(`Hai selezionato l'elemento ${event}!`);
   }
 }

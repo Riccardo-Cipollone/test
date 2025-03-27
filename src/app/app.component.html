@@ -52,7 +52,8 @@
       variant="error"
     ></app-alert>
   </div> -->
-  <div class="my-4">
+  <!-- <div class="my-4">
+
     <h1>Accordion 1</h1>
     <app-accordion-item groupName="accordion-1" title="Oggetto n.1">
       <p>
@@ -86,7 +87,30 @@
     <app-accordion-item groupName="accordion-2" title="Oggetto n.4" selected>
       <h1 class="text-4xl">SCRITTA MOLTO GRANDE</h1>
     </app-accordion-item>
-  </div>
+  </div> -->
+  <app-dropdown
+    [items]="dropdownItems"
+    [position]="'left'"
+    (onClickElement)="onClickElementHandler($event)"
+  >
+    Open and Close
+  </app-dropdown>
+  <hr />
+  <app-dropdown
+    [items]="dropdownItems"
+    [position]="'right'"
+    (onClickElement)="onClickElementHandler($event)"
+  >
+    <strong>Lorem ipsum dolor sit amet.</strong>
+  </app-dropdown>
+  <hr />
+  <app-dropdown
+    [items]="dropdownItems"
+    [position]="'top'"
+    (onClickElement)="onClickElementHandler($event)"
+  >
+    <button class="btn btn-primary">lmao</button>
+  </app-dropdown>
 </div>
 <router-outlet />
 
