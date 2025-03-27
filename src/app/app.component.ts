@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
+import { AccordionItemComponent } from "./components/accordion-item/accordion-item.component";
 import { AlertComponent } from "./components/alert/alert.component";
 import { PhoneComponent } from "./components/phone/phone.component";
 import {
@@ -16,6 +17,7 @@ import {
     PhoneComponent,
     TimelineComponent,
     AlertComponent,
+    AccordionItemComponent,
   ],
   templateUrl: "./app.component.html",
   styles: [],

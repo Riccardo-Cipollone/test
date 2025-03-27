@@ -5,7 +5,7 @@
   <!-- <app-phone [alt]="alt" [src]="imageUrl" mostraAlt size="xl"></app-phone> -->
   <!-- <app-timeline [timelineItems]="timelineItems" vertical></app-timeline>
   <app-timeline [timelineItems]="timelineItems"></app-timeline> -->
-  <div class="flex flex-col gap-4">
+  <!-- <div class="flex flex-col gap-4">
     <app-alert
       (onDeny)="onDenyHandler()"
       (onConfirm)="onConfirmHandler()"
@@ -51,6 +51,41 @@
       confirmLabel="Accetta"
       variant="error"
     ></app-alert>
+  </div> -->
+  <div class="my-4">
+    <h1>Accordion 1</h1>
+    <app-accordion-item groupName="accordion-1" title="Oggetto n.1">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deserunt,
+        non doloremque dolorum hic ullam.
+      </p>
+    </app-accordion-item>
+    <app-accordion-item groupName="accordion-1" title="Oggetto n.2" selected>
+      <strong
+        >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
+        quisquam!</strong
+      >
+    </app-accordion-item>
+    <app-accordion-item groupName="accordion-1" title="Oggetto n.3">
+      <small>Scritta piccolina</small>
+    </app-accordion-item>
+  </div>
+  <div class="my-4">
+    <h1>Accordion 2</h1>
+    <app-accordion-item groupName="accordion-2" title="Oggetto n.5">
+      <button class="btn btn-success">Cliccami per favore!</button>
+    </app-accordion-item>
+    <app-accordion-item groupName="accordion-2" title="Oggetto n.6">
+      <app-alert
+        (onDeny)="onDenyHandler()"
+        (onConfirm)="onConfirmHandler()"
+        confirmLabel="Accetta"
+        variant="error"
+      ></app-alert>
+    </app-accordion-item>
+    <app-accordion-item groupName="accordion-2" title="Oggetto n.4" selected>
+      <h1 class="text-4xl">SCRITTA MOLTO GRANDE</h1>
+    </app-accordion-item>
   </div>
 </div>
 <router-outlet />
